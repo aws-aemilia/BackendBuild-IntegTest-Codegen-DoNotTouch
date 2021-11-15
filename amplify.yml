@@ -1,0 +1,19 @@
+version: 1
+backend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 14
+        - nvm use 14
+        - npm install -g @aws-amplify/cli@6.3.1
+    build:
+      commands:
+        - amplifyPush --simple
+frontend:
+  phases:
+    build:
+      commands:
+        - echo "true"
+  artifacts:
+    baseDirectory: src
+    files: "**/*"
