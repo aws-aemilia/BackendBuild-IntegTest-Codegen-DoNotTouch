@@ -16,4 +16,5 @@ frontend:
         - echo "true"
   artifacts:
     baseDirectory: src
-    files: "**/*"
+    files:
+      - "**/*"
